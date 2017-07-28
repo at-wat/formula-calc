@@ -14,4 +14,7 @@ install(TARGETS formula-calc
 	ARCHIVE DESTINATION lib
 	LIBRARY DESTINATION lib
 )
+install(FILES include/formula-calc.h
+	DESTINATION include
+)
 
