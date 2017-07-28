@@ -10,7 +10,7 @@ branches:
 
 before_install:
   - sudo apt-get update -y
-  - sudo apt-get install -y build-essential gtest
+  - sudo apt-get install -y build-essential libgtest-dev
 
 install:
   - mkdir build && cd build
