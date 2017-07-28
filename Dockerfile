@@ -5,7 +5,10 @@ RUN apt-get -qq update && \
 	apt-get clean -qq && \
 	rm -rf /var/lib/apt/lists/*
 
-RUN mkdir build && cd build && \
+COPY ./ /usr/src/formula-calc/
+
+RUN mkdir /usr/src/formula-calc/build && cd /usr/src/formula-calc/build && \
 	cmake .. && \
 	make && make test && \
-	sudo make install
+	sudo make install &&
+	rm -rf /usr/src/formula-calc/build
