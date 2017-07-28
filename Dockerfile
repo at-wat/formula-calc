@@ -1,4 +1,4 @@
-FROM xenial:latest
+FROM ubuntu:xenial
 
 RUN apt-get -qq update && \
 	apt-get install -y --no-install-recommends sudo build-essential libgtest-dev && \
