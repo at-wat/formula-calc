@@ -21,7 +21,4 @@ install:
   - docker build -t formula-test:latest --pull=true ${TRAVIS_BUILD_DIR}
 
 script:
-  - if [[ ${TRAVIS_BRANCH} == "master" ]] && [[ ${TRAVIS_PULL_REQUEST} == "false" ]]; then \
-      mkdir -p $(dirname ${DOCKER_CACHE_FILE}); \
-      docker save $(docker history -q sq-api:latest | grep -v '<missing>') | gzip > ${DOCKER_CACHE_FILE}; \
-    fi
+  - if [[ ${TRAVIS_BRANCH} == "master" ]] && [[ ${TRAVIS_PULL_REQUEST} == "false" ]]; then mkdir -p $(dirname ${DOCKER_CACHE_FILE}); docker save $(docker history -q formula-test:latest | grep -v '<missing>') | gzip > ${DOCKER_CACHE_FILE}; fi
