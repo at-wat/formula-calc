@@ -1,7 +1,7 @@
 FROM ubuntu:xenial
 
 RUN apt-get -qq update && \
-	apt-get install -y -qq --no-install-recommends sudo build-essential cmake git ca-certificates && \
+	apt-get install -y -qq --no-install-recommends sudo build-essential cmake git ca-certificates valgrind && \
 	apt-get clean -qq && \
 	rm -rf /var/lib/apt/lists/*
 
