@@ -18,6 +18,6 @@ COPY ./ /usr/src/formula-calc/
 RUN mkdir -p /usr/src/formula-calc/build && \
 	cd /usr/src/formula-calc/build && \
 	cmake .. && \
-	make && (make test || cat Testing/Temporary/LastTest.log; false) && \
+	make && (make test || (cat Testing/Temporary/LastTest.log; false)) && \
 	sudo make install && \
 	rm -rf /usr/src/formula-calc/build
