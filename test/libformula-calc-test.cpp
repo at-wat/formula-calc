@@ -34,7 +34,7 @@ TEST( FormulaCalcTest, testFormulaCalculation )
 {
 	int i;
 
-	for(i = 0; i < 1000; i ++)
+	for(i = 0; i < 5; i ++)
 	{
 		struct rpf_t *rpf;
 		struct rpf_t *rpf2;
@@ -48,11 +48,12 @@ TEST( FormulaCalcTest, testFormulaCalculation )
 
 		ASSERT_EQ( formula( "1+1", &rpf, variable ), 1 );
 		ret = formula_eval( rpf );
-		EXPECT_EQ( ret, 2.0 );
+		EXPECT_EQ( ret, 2.1 );
 		rpf2 = formula_optimize( rpf );
 		ret = formula_eval( rpf2 );
 		EXPECT_EQ( ret, 2.0 );
 		formula_free( rpf );
+		formula_free( rpf2 );
 		formula_free( rpf2 );
 
 		ASSERT_EQ( formula( "abc+1", &rpf, variable ), 0 );
