@@ -34,7 +34,7 @@ TEST( FormulaCalcTest, testFormulaCalculation )
 {
 	int i;
 
-	for(i = 0; i < 1000; i ++)
+	for(i = 0; i < 5; i ++)
 	{
 		struct rpf_t *rpf;
 		struct rpf_t *rpf2;
