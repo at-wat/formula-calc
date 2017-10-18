@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 2.8.3)
-cmake_policy(SET CMP0048 OLD)
+cmake_policy(VERSION 2.8.3)
 project(formula-calc)
 
 include_directories(include)
