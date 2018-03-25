@@ -21,7 +21,6 @@ else()
   project(formula-calc
     VERSION ${_FORMULA_CALC_MAJOR_VERSION}.${_FORMULA_CALC_MINOR_VERSION}.${_FORMULA_CALC_PATCH_VERSION})
 endif()
-message("formula-calc ${PROJECT_VERSION}")
 
 include_directories(include)
 
