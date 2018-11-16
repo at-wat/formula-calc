@@ -36,7 +36,7 @@ extern "C"
 
 #include <stdio.h>
 
-enum type_t
+enum rpf_type_t
 {
   TYPE_VALUE,
   TYPE_MATH,
@@ -49,7 +49,7 @@ enum type_t
 
 struct rpf_t
 {
-  enum type_t type;
+  enum rpf_type_t type;
   void *value;
   struct rpf_t *next;
 };

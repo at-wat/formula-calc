@@ -32,7 +32,7 @@
 struct stack_t
 {
   int rank;
-  enum type_t type;
+  enum rpf_type_t type;
   void *value;
 };
 
@@ -40,7 +40,7 @@ struct operation_t
 {
   char op[8];
   int rank;
-  enum type_t type;
+  enum rpf_type_t type;
   double (*func)(double **);
   int narg;
 };
