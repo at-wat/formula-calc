@@ -1,3 +1,5 @@
+**ARCHIVED: This package is maintained under https://github.com/openspur/yp-spur**
+
 # formula-calc
 
 Simple mathematical formula processing library.
